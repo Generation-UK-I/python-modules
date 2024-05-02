@@ -16,7 +16,7 @@
 
 Weasley's favorite time of day is also dinner time! Weasley's dinner time problems will help us with learning lists. 
 
-Don't worry, Noche will come back too :-) 
+Don't worry, Noche will come back too 
 
 ## Take a Look...
 
