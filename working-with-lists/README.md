@@ -1,7 +1,7 @@
-## Working With Lists
+## Working With Lists Overview
 ---
 
-This module is the first practical Python unit in the course. This module aims to introduce foundational concepts of variables, strings, and different data types.
+This module is the third practical Python unit in the course. This module aims to introduce foundational concepts of tuples, use of Math with lists, and for loops.
 
 Please start by going through the session plan and the slide deck for this module. When finished teaching, refer learners to the exercises to complete. The session plan is listed below to help assist with the teaching of this module.
 
