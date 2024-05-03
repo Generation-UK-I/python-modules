@@ -15,25 +15,25 @@ Please start by going through the session plan and the slide deck for this modul
 
 ### Key Points
 
-What is a For Loop, what is the correct syntax, how and when is it used?
-How can the range function be used to make code more efficient?
-What functions and methods may be used with lists?
-How do you use slices to copy all or part of a list and why would you?
-What is a tuple and how does it compare to a list?
+- What is a For Loop, what is the correct syntax, how and when is it used?
+- How can the range function be used to make code more efficient?
+- What functions and methods may be used with lists?
+- How do you use slices to copy all or part of a list and why would you?
+- What is a tuple and how does it compare to a list?
 
 ### Assessment
 
-Via practical challenges
+- Via practical challenges
 
 ### Instructor Prep
 
-Note: These session plans include sections where long explanations are provided simply because it is important to ensure that these tricky concepts are communicated as clearly as possible. However, it is not expected that the instructor will recite these verbatim, feel free to use your own refined and well-honed approach as long as the learning point is covered. The provided narrative is always available if needed.
-Learning and delivery can be more effective if resources and tasks are personalised. If time permits, feel free to update slides with your own examples such as replacing cat examples with your own pets, or anything else.
+- Note: These session plans include sections where long explanations are provided simply because it is important to ensure that these tricky concepts are communicated as clearly as possible. However, it is not expected that the instructor will recite these verbatim, feel free to use your own refined and well-honed approach as long as the learning point is covered. The provided narrative is always available if needed.
+- Learning and delivery can be more effective if resources and tasks are personalised. If time permits, feel free to update slides with your own examples such as replacing cat examples with your own pets, or anything else.
 
 ### Materials
 
-Working with Lists - exercises
-Working with Lists - powerpoints
+- Working with Lists - exercises
+- Working with Lists - powerpoints
 
 ### Time
 
