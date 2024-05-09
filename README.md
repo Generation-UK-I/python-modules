@@ -7,7 +7,7 @@ Participants will learn how to write some basic programs using the Python progra
 
 ## Structure
 
-This module comprises 11 sessions which, after the first two, each focus upon an different area of functionality, escalating in complexity. Module 1 discusses programming in general, and Module 2 introduces the additional tools and software the learners will require both on-program and in industry. 
+This module comprises 11 sessions which, after the first two, each focus upon an different area of functionality, escalating in complexity. This module is typically taught over the course of a week. Once each lesson is taught, the module ends with an application project and presentation which takes at least 2 days to complete. Below is the organization of what module to teach first and their timings.
 
 | Title | Time | Format | Objectives | Assessment |
 | --- | --- | --- | --- | --- |
