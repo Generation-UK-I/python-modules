@@ -22,4 +22,4 @@ This module comprises 11 sessions which, after the first two, each focus upon an
 | 8 - Functions | 120 minutes | Sync |  | Via practical assessment |
 | 9 - Classes | 120 minutes | Sync |  | Via practical assessment |
 | 10 - Files and Exceptions | 120 minutes | Sync |  | Via practical assessment |
-|11 - Application Project | 120 minutes | Sync |  |   |
+|11 - Application Project | 120 minutes | Async |  |   |
