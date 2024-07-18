@@ -1,6 +1,8 @@
 ## Materials
 ---
-### Quick Overview
+This folder contains all materials needed to conduct the final application project for the Generation Python course. Please see below for more details. 
+
+#### Quick Overview
 ---
 This project is about a book cafe that serves drinks, a selection of foods, and a good selection of bestselling books.
     1. The application showcase a list of their menu and book items
@@ -10,7 +12,7 @@ This project is about a book cafe that serves drinks, a selection of foods, and 
     5. view customer details for book delivery
 
 
-### Folder Structure
+#### Folder Structure
 ---
 This folder provides all materials (or links to materials) needed to conduct the final application project for the Generation Python course. Here is a breakdown of what is in each folder: 
 
