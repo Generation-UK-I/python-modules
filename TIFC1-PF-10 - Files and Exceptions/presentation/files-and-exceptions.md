@@ -31,8 +31,19 @@ There is a lot going on here though so let’s break it down.
 
 ---
 
+### The open() function
 
+```py
+with open('foods.txt') as file_object:
+```
 
+To do anything with a file, you first need to open it, even if it is something as simple as printing the contents.
+
+The `open()` function only requires one argument - what you want to open!
+
+Python will look for this file in the directory where the program that’s currently being executed is stored, which is fine if you save both .py and .txt files in the same directory. You could also provide an absolute or relative path to the file if it's saved elsewhere.
+
+### The read() method
 
 
 
