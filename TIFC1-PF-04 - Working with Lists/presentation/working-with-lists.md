@@ -52,10 +52,23 @@ STOP AND RUN: Let's apply this syntax to access each element in the favorite_foo
 favorite_foods = ['tuna', 'salmon', 'sardines', 'mackerel']
 
 for food in favorite_foods:
-    print(f"Okay Weasley and Noche! You can have {food} for dinner!")
+    print(food)
 ```
 
-When the code runs, it will iterate through each item listed in the favorite_foods list along with a statement. In the code, 'food' can be seen as a temporary variable that allows each item in the favorite_foods list to pass through and be used within the for loop. 
+When the code runs, it will iterate through each item listed in the favorite_foods list until there are no more items in the list to print out. Think of this code as: For each food in the list of favorite foods, print our each food item. 
+
+In the code, 'food' can be seen as a temporary variable that allows each item in the favorite_foods list to pass through and be used within the for loop. 
+
+Need a break from all the cats and cat foods? No worries, let's take a look at another example with some other furry friends: 
+
+```py
+dogs = ['frankie', 'otto', 'daisy', 'flossie']
+
+for dog in dogs:
+    print(dog)
+```
+
+This works the exact same way as the previous example, just with a different list and different variable names. Think of this as: For each dog in the dogs list, print their name. Python will loop through each dog in the list and print their name.
 
 Now take a look at the example from the start of this lesson: 
 
@@ -70,8 +83,9 @@ for food in foods:
    
 print("Nothing!")
 ```
+The for loop works exactly the same as the previous examples! We start with a list of foods, then the for loop will iterate through each item in our list of foods but will include the item in a statement. Try running this code to see how it works! 
 
-
+STOP AND CODE: Try modifying one of the previous examples to make your own code using a for loop. The best way to learn Python is to practice and make mistakes! 
 TOP TIP: Always remember to add your colon ( : )!
 
 
@@ -79,7 +93,115 @@ TOP TIP: Always remember to add your colon ( : )!
 ---
 #### Making Numerical Lists
 
+Cats and dogs aside, sometimes you might need to make lists using numbers. To make a list using numbers, you do exactly what you have seen with our list of cat food and dogs:
+
+```py
+numbers = [1, 2, 3, 4, 5]
+
+for number in numbers:
+    print(number)
+```
+But you can do so much more with numbers and lists!
+
 #### 'range()' function
+
+Python’s range() function makes it easy to generate a series of numbers within a given range of numbers you provide. The syntax to use range() is as follows: 
+
+```py
+range(start, stop, step)
+```
+The start and step integers are optional, only the stop integer is mandatory. The start integer is what number you want to start from, by default the starting number is 0 unless specified. The stop integer is where you  want to end or what you wnat to count until. Finally, the step number specifies the incrementation or what would you like to count up by. Take a lok below for some example use cases for each of these. 
+
+In the following code, we use a for loop to loop through a specific range of numbers. To use range, specify the starting number first and then the final number last. In this case, the code will run through the numbers, 1, 2, 3... Try running the following to see how range works:
+
+```py
+for value in range(1,5):
+    print(value)
+```
+Did you notice anything strange when running it?
+
+You may have noticed that the output shown when running the above code was as follows: 
+
+```py
+1
+2
+3
+4
+```
+
+Why do you think it does that? 
+
+Python has a 'one off' behavior, so will not show last value, only up until 4. The reason goes back to zero-based indexing, which was discussed in the last module. Recall that Python starts counting from 0, so if we want to access the first element within a list, we need to start from 0. The reasoning behind why Python has this 'one off' behavior is the same. To see an example of this, try running the following code: 
+
+```py
+for value in range(5):
+    print(value)
+```
+Instead of specifying a starting number, only a final number was given. Notice that if a starting number is not given, then the output will be: 
+
+```py
+0
+1
+2
+3
+4
+```
+Python did count up to 5 numbers, but starts from 0 when counting. If you would like to count from 1-5 exactly, you will need to put the final number as 6 rather than 5. Try running this code: 
+
+```py
+for value in range(1,6):
+    print(value)
+```
+
+The output is now: 
+
+```py
+1
+2
+3
+4
+5
+```
+
+We have dscussed using the start and stopping integers when using range(), but what about the step integer? Try running the following code: 
+
+```py
+for value in range(2,21,2):
+    print(value)
+```
+In this code, the starting integer is 2 and the stopping integer is 21. On its own, python would count from 2-20. However, this code has added a 2 as a step integer. This means, then we can count up by a number that we specify. In this case, the output would be: 
+
+```py
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+```
+If the step integer was changed, we could count up by other numbers such as 3: 
+
+```py
+for value in range(2,21,3):
+    print(value)
+```
+The output would be: 
+
+```py
+2
+5
+8
+11
+14
+17
+20
+```
+
+STOP AND CODE:Try changing the start, stop, and step integers to see how range() works! 
 
 #### `list()` function
 
