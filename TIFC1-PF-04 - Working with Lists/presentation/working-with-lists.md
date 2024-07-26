@@ -248,6 +248,24 @@ print(even_numbers)
 
 #### Finding min, max, and sum of digits
 
+Sometimes, you may need to find the minimum, maximum and the sum of digits. Python has built-in tools that allow you to do this! Take a look at the following example: 
+
+```py
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+print(min(digits))
+print(max(digits))
+print(sum(digits))
+```
+
+This piece of code starts with a list of digits from 0-9. min(digits) calculates the smallest value in the digits list, which is 0. max(digits) calculates the largest value in the digits list, which is 9. sum(digits) calculates the total sum of all the values in the digits list. The sum is 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 0 = 45. So, the output of this code would be: 
+
+```py
+0
+9
+45
+```
+STOP AND CODE: Try creating a list, then use `min()`, `max()`, and `sum()` to print different outputs! Good luck!
+
 ### Back to Our Teaching Assistants!
 
 ---
