@@ -109,6 +109,8 @@ Python’s range() function makes it easy to generate a series of numbers within
 
 ```py
 range(start, stop, step)
+OR
+range(<starting point>,<what you want to go up until>,<how many you go up by>)
 ```
 The start and step integers are optional, only the stop integer is mandatory. The start integer is what number you want to start from, by default the starting number is 0 unless specified. The stop integer is where you  want to end or what you wnat to count until. Finally, the step number specifies the incrementation or what would you like to count up by. Take a lok below for some example use cases for each of these. 
 
@@ -203,7 +205,46 @@ The output would be:
 
 STOP AND CODE:Try changing the start, stop, and step integers to see how range() works! 
 
+
 #### `list()` function
+
+`list()` is a Python function that makes a new list, which is like a container that can hold a collection of items in a specific order. The syntax for using this, is as follows: 
+
+```py
+list([iterable])
+```
+Iterables are an optional parameter that can be any iterable (like a list, tuple, set, or string). If no argument is provided, it creates an empty list. For example:
+
+```py
+new_list = list()
+```
+This piece of code create an empty list that you can append items into. If you would like to create a list from an iterable, you could try: 
+
+```py
+my_list = list('hello noche')
+
+print(my_list)
+```
+STOP AND RUN: Try running the above code to see how it works! Try changing the message within the list to see different outputs!
+
+That is not all you can do with `list()`! If you want to make a list of numbers, you can convert the results of range() directly into a list using the list() function. When you wrap list() around a call to the range() function, the output will be a list of numbers. Here is an example of this: 
+
+```py
+numbers = list(range(1,6))
+print(numbers)
+```
+The output of this will be: 
+```py
+[1, 2, 3, 4, 5]
+```
+You could even use these functions to skip numbers in a given range using `list()`! Here is an example of this: 
+
+```py
+even_numbers = list(range(2,11,2))
+print(even_numbers)
+```
+
+`list()` is a very useful function when working with lists. There is much more you can do with this! For now, we will continue to learn about other concepts. 
 
 #### Finding min, max, and sum of digits
 
