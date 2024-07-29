@@ -12,7 +12,8 @@
 
 #### Take a Look!
 
-What doe you think will happen if this code were to run?
+What do+
+-you think will happen if this code were to run?
 
 ```py
 foods = ["tuna", "salmon", "mackerel", "trout"]
@@ -29,6 +30,7 @@ Let's break down the content from this piece of code.
 
 ---
 #### for loops
+
 A for loop is used for iterating over a sequence. What Python will do is loop through each of the items in a list that you have provided, rather than accessing each item in the list individually. For example, imagine we have a list of Noche and Weasley's favorite food items: 
 
 ``` py
@@ -267,21 +269,155 @@ This piece of code starts with a list of digits from 0-9. min(digits) calculates
 STOP AND CODE: Try creating a list, then use `min()`, `max()`, and `sum()` to print different outputs! Good luck!
 
 ### Back to Our Teaching Assistants!
+<img src="img/happy_weasley.jpg" width="300" />
 
 ---
 #### Slicing a List
 
+Slicing a list in Python means making a new list by taking a part of the original list. You can choose where to start, where to stop, and how many steps to take between elements. The syntax is very similar to what we learned with `range()`, just not was are using index numbers to manipulate what list items are in the output. The syntax for slicing a list is as follows: 
+
+```py
+your_list[start:stop:step]
+```
+
+Let's take a look at Weasley and Noche's list of dinner items to show some examples. We will start with a list of their favorite foods, then will practice slicing the list. RUN each of the following example codes to see how it works. Feel free to change the index numbers to see what happens! Here is an example of omitting the start or stop index number:
+
+
+```py
+foods = ["tuna", "salmon", "mackerel", "trout"]
+
+print(foods[:2])
+```
+
+In the above code, only the stop index number was provided. Therefore, the output will begin from the start of the list. The slice was made at index number 2 of our list. This means that the output will be: 
+
+```py
+['tuna', 'salmon']
+```
+
+Try changing the stop index number to see how you can manipulate the output. 
+
+The next piece of code is an example of omitting the stop index and only using the start index number. 
+
+```py
+foods = ["tuna", "salmon", "mackerel", "trout"]
+
+print(foods[1:])
+```
+This works very similarly to the first example, a single slice is made to our list except the slice is not made at index number 1. This means that our output will be: 
+
+```py
+['salmon', 'mackerel', 'trout']
+```
+
+NEED TO FINISH
 
 #### Looping Through a Slice
 
+You can use a slice in a for loop if you want to loop through a subset of the elements in a list. 
+
+```py
+foods = ["tuna", "salmon", "mackerel", "trout"]
+
+print("Alright Weasley and Noche, this is what we can have for dinner: ")
+for food in foods[0:4]:
+    print(food.title())
+```
+
+Another example: 
+
+```py
+plants = ['hawthoria', 'palm', 'pothos', 'barrel cactus', 'prayer plant']
+print("Here are my favorite plants out of my list:")
+for plant in plants[0:4]:
+    print(plant.title())
+```
+
+NEED TO FINISH
+
 #### Copying a List
 
+To copy a list, you can make a slice that includes the entire original list by omitting the first index and the second index ([:]). This tells Python to make a slice that starts at the first item and ends with the last item, producing a copy of the entire list. 
+
+```py
+weasley_foods = ["tuna", "salmon", "mackerel", "trout"]
+noche_foods = weasley_foods[:]
+
+weasley_foods.append('chicken')
+noche_foods.append('cheese')
+
+print("The foods Weasley likes to eat is: ")
+print(weasley_foods)
+
+print("The foods Noche likes to eat is: ")
+print(noche_foods)
+```
 
 #### Tuples
+
+A tuple looks just like a list except you use parentheses instead of square brackets.
+
+The reason why you use this - if you want to list things out but not change it. Think about a permanent menu option that you always want to keep up. 
+
+Tuples are known as the immutable lists, or a list that cannot change. 
+
+```py
+#a simple tuple
+foods = ("tuna", "salmon", "mackerel", "trout")
+print(foods)
+```
+
+```py
+#a simple tuple; accessing element
+foods = ("tuna", "salmon", "mackerel", "trout")
+print(foods)
+print(foods[2])
+```
+
+Another example: 
+
+```py
+#defining a simple tuple
+plants = ('cacti', 'pothos', 'eucalyptus')
+print(plants)
+```
+
+```py
+#accessing an element in a tuple is the same as accessing one in a list
+plants = ('cacti', 'pothos', 'eucalyptus')
+print(plants[0])
+```
 
 
 #### Redefining a Tuple
 
+Although you cannot change the elements in a tuple, you can assign a new value to a variable that represents a tuple.
+Use them if you do not want the values to changes throughout the life of a program. 
+
+```py
+plants = ('cacti', 'pothos', 'eucalyptus')
+for plant in plants:
+    print(plant)
+
+plants = ('palm', 'tree', 'lily pad')
+for plant in plants:
+    print(plant)
+   
+print(plants)
+```
+
 ### Back to our code from the start!
+
+```py
+foods = ["tuna", "salmon", "mackerel", "trout"]
+
+print("Okay Weasley, you can eat any of the following for dinner:")
+
+for food in foods:
+    print("You can have " + food + " for dinner. ")
+    print("or....")
+   
+print("Nothing!")
+```
 
 ### Well done! Now move onto the Working with Lists Exercises!
