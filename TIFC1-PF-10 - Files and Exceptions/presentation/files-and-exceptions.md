@@ -245,6 +245,7 @@ with open(filename, 'w') as obj:
     json.dump(cat, obj)
     print(f"Welcome {cat}, I will remember you on your next visit!")
 ```
----
+
+## Practice
 
 Now practice implementing the skills demonstrating here by completing the associated exercises.

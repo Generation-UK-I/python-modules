@@ -303,6 +303,8 @@ bob_tiger.sleep()
 
 We've created a `Tiger` class, which is a child of the `Cat` parent class.
 
+### The `super()` function
+
 The `super()` function helps Python make connections between a parent and a child class, and the `__init__` method takes in information required to make a Cat instance.
 
 ```py
@@ -321,6 +323,8 @@ bob_tiger.sleep()
 ```
 
 Now we've added an additional attribute for our `Tiger` class, this attribute will only be held by instances of the `Tiger` class, but not instances of the `Cat` class. We've then provided Tigers with their own method too, in this case they can express their food preference if anyone tries to feed them normal cat food.
+
+### Override Methods
 
 ```py
 ...
@@ -342,3 +346,18 @@ bob_tiger.sleep()
 
 We can also override methods from the parent class, if we want the child to do it differently; Above we have created a climb method for Tigers, and Python will disregard the same method from the parent `Cat` class.
 
+### Importing Classes
+
+As you add more functionality to your classes, your files can get long, even when you use inheritance properly. In keeping with the overall philosophy of Python, you’ll want to keep your files as uncluttered as possible.
+
+To help, Python lets you store classes in modules and then import the classes you need into your main program.
+
+### The Python Standard Library
+
+The Python standard library is a set of modules included with every Python installation. Now that you have a basic understanding of how classes work, you can start to use modules like these that other programmers have written. You can use any function or class in the standard library by including a simple import statement at the top of your file. 
+
+Read more about the Python Standard Library here: https://docs.python.org/3/library/index.html
+
+## Practice
+
+Now practice implementing the skills demonstrating here by completing the associated exercises.
