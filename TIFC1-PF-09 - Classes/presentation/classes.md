@@ -31,7 +31,7 @@ So, if a customer selects Caramel Syrup in their coffee, we can write a line of 
 
 Classes are how we make objects, they're like object constructors, or a blueprint for creating new objects.
 
-### Creating and Using a Class
+## Creating and Using a Class
 
 You can model almost anything using a class. To start, you use the keyword ‘class’. You just need to think about what you are modelling.
 
@@ -62,13 +62,13 @@ class Cat():
 
 What can we see here?
 
-### Methods
+## Methods
 
 A function that is within a class is called a method and is available to objects created by the class. This is the exact same thing as the functions we created in Module 8, just named something different within classes.
 
 In the example we've created three methods `def __init__(self, name, age)`, `def sleep(self)` and `def climbing(self)`, but the first one is likely the most unfamiliar.
 
-#### __init__() Method
+### The `__init__()` Method
 
 ```py
 class Cat():
@@ -83,7 +83,7 @@ All classes require a function called `__init__()`, which is always executed whe
 
 Other operations that are necessary when the object is being created, for example, creating a confirmation message for each created object, can also be carried out in the `__init__()` method.
 
-#### The `self` Parameter
+### The `self` Parameter
 
 The self parameter is a reference to the instance itself; This is a litle confusing, but the point of classes is to make objects - and each object needs to be unique. Imagine you're making a game, and your class creates enemies. Each enemy might start the same, but they each need their own health bar, perhaps you want them to be different colours. So `self` gives each individual instance access to it's own set of attributes, and allows each instance to access the methods from within the class individually. So, if you give your enemies a method allowing them to dodge out of your way, they won't all have to dodge at the same time.
 
@@ -104,7 +104,7 @@ One more point about `self`, if you think back to the Functions module, you may 
 
 In our example, to call our class and create a cat, we just need to provide the name and age of the cat(s) we want to create. But one last thing first, we also gave them the ability to sleep and climb.
 
-
+*NOTE: Three dots `...` indicate omitted code.*
 ```py
 ...
     def sleep(self):
@@ -146,7 +146,7 @@ Ok, so where is Weasley?
 
 He has been assigned to the `my_cat` variable. 
 
-#### Calling Methods
+## Calling Methods
 
 To call a method simply give the name of the instance, and method you want to call, separated by a dot, just like when we called string methods right back at the beginning, we called it **dot notation.**
 
@@ -172,7 +172,7 @@ my_cat.sleep()
 my_cat.climb()
 ```
 
-#### Accessing Attributes
+## Accessing Attributes
 
 Dot notation also allows us to access the instance's individual attributes directly.
 
@@ -185,11 +185,13 @@ print(f"My cat's name is {my_cat.name}")
 print(f"My cat is {my_cat.age} years old")
 ```
 
-#### Creating Multiple Instances
+## Creating Multiple Instances
 
 Someone is feeling left out
 
 <img src="img/noche.jpg" width="300" />
+
+You can create as many instances from a class as you need, just as long as you give each instance a unique variable name.
 
 ```py
 ...
@@ -198,7 +200,145 @@ first_cat = Cat('Weasley', 1)
 second_cat = Cat('Noche', 2)
 
 print(f"My cats are called {first_cat.name} and {second_cat.name}")
-print(f"My cat is {my_cat.age} years old")
-
-
+print(f"{first_cat.name} is {first_cat.age} years old, and {second_cat.name} is {second_cat.age}")
 ```
+
+We could have called the variables 'Weasley' and 'Noche' if we wanted, and that may well be better. Here using `first_cat` and `second_cat` just makes it a little less confusing at first as there's less repetition.
+
+## Default Values for an Attribute
+
+If we want the instances created by a class to have another attribute, which is the same for all or most of the instances, we can add it with a default value.
+
+```py
+class Cat():
+    #an attempt to model a cat
+    def __init__(self, name, age):
+        #assign the cats name and age
+        self.name = name
+        self.age = age
+        self.animal_type = 'cat'
+```
+
+Now we have an additional attribute for `animal_type` with a default value of `cat`. Since this class makes cats, it makes sense that every object created by it has the same `animal_type`.
+
+We can add a new method, and call upon that attribute just like the others
+
+```py
+...
+        def animal_species(self):
+            print(f"{self.name} is a {self.animal_type}")
+...
+
+first_cat.animal_species()
+```
+
+### Modifying Attribute Values
+
+An attributes values may be modified directly by simply defining a new value to it using dot notation
+
+```py
+...
+first_cat = Cat('Weasley', 1)
+print(f"{first_cat.name} is {first_cat.age}")
+first_cat.age = 3
+print(f"{first_cat.name} is {first_cat.age}")
+```
+
+You may also create a method to update the value of an attribute which you can call when needed
+
+```py
+...
+    def climb(self):
+        #The cat can sleep
+        print(f"Quick! {self.name} is climbing on the roof!")
+
+    def animal_species(self, species):
+        self.animal_type = species
+        print(f"{self.name} is a {self.animal_type}")
+
+first_cat = Cat('Weasley', 1)
+print(f"{first_cat.name} is a {first_cat.animal_type}")
+first_cat.animal_species('dog')
+```
+
+Here the `animal_species` method has an additional parameter, not included in the `__init__` method, for which we need to provide an argument `dog` when we call it.
+
+## Inheritance
+
+ If you need to create a class which is similar to, or is a specialized version of an existing class, you do not need to start from scratch, you can use inheritance. 
+ 
+ When one class inherits from another, it automatically takes on all the attributes and methods of the first class. The original class is called the parent class, and the new class is the child class. 
+ 
+ The child class inherits every attribute and method from its parent class but is also free to define new attributes and methods of its own.
+
+ ```py
+class Cat():
+    #An attempt to model a cat
+    def __init__(self, name, age):
+        #assign the cats name and age
+        self.name = name
+        self.age = age
+        self.animal_type = 'cat'
+
+    def sleep(self):
+        #The cat can sleep
+        print(f"{self.name} is fast asleep like a little angel")
+
+    def climb(self):
+        #The cat can sleep
+        print(f"Quick! {self.name} is climbing on the roof!")
+
+    def animal_species(self, species):
+        self.animal_type = species
+        print(f"{self.name} is a {self.animal_type}")
+
+class Tiger(Cat):
+    #A different type of cat
+    def __init__(self, name, age)
+        super().__init__(name, age)
+    
+bob_tiger = Tiger('Bob', 12)
+bob_tiger.sleep()
+```
+
+We've created a `Tiger` class, which is a child of the `Cat` parent class.
+
+The `super()` function helps Python make connections between a parent and a child class, and the `__init__` method takes in information required to make a Cat instance.
+
+```py
+...
+class Tiger(Cat):
+    #A different type of cat
+    def __init__(self, name, age)
+        super().__init__(name, age)
+        self.foods = 'gazelle'
+
+    def food_pref(self):
+        print(f"{self.name} doesn't want cat food, he likes {self.foods}")
+
+bob_tiger = Tiger('Bob', 12)
+bob_tiger.sleep()
+```
+
+Now we've added an additional attribute for our `Tiger` class, this attribute will only be held by instances of the `Tiger` class, but not instances of the `Cat` class. We've then provided Tigers with their own method too, in this case they can express their food preference if anyone tries to feed them normal cat food.
+
+```py
+...
+class Tiger(Cat):
+    #A different type of cat
+    def __init__(self, name, age)
+        super().__init__(name, age)
+        self.foods = 'gazelle'
+
+    def food_pref(self):
+        print(f"{self.name} doesn't want cat food, he likes {self.foods}")
+
+    def climb(self):
+        print(f"{self.name} climbs much higher than a house cat!!!")
+
+bob_tiger = Tiger('Bob', 12)
+bob_tiger.sleep()
+```
+
+We can also override methods from the parent class, if we want the child to do it differently; Above we have created a climb method for Tigers, and Python will disregard the same method from the parent `Cat` class.
+
