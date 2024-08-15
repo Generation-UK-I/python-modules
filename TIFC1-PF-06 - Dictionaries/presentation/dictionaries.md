@@ -22,3 +22,19 @@ We declare dictonaries using curly brackets {}
 We've already met Dumb and Dumber, but they also have a friend... some sort of uglier, wrinklier, house elf???
 
 <img src="img/cat_trio.jpg" width="600" />
+
+A common use of dictionaries is to represent real world objects, here is one representing Weasley.
+
+```py
+weasley = {'fur': 'white and ginger', 'eyes': 'yellow', 'toes': 'pink'}
+```
+
+It is common to write your dictionary across several lines for improved readability because the keys all line up.
+
+```py
+weasley = { 
+    'fur': 'white and ginger',
+    'eyes': 'yellow',
+    'toes': 'pink'
+    }
+```
