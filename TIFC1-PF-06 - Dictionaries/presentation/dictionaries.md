@@ -215,6 +215,8 @@ You might want to store a list inside a dictionary, or a dictionary inside a lis
 
 ### A List of Dictionaries
 
+If you have multiple dictionaries that you need to work with, you could add them to a list.
+
 ```py
 weasley = { 
     'fur': 'white and ginger',
@@ -242,6 +244,8 @@ for cat in cats:
 
 ### A List in a Dictionaries
 
+If you want to provide multiple values for a key in your dictionary, you can add the values to a list, and make the list the value for the key.
+
 ```py
 bigglesworth = { 
     'fur': 'none',
@@ -253,3 +257,37 @@ bigglesworth = {
 for food in bigglesworth['favourite foods']:
     print(f"Bigglesworth just loves eating {food}")
 ```
+
+### A Dictionary in a Dictionary
+
+You can also have a dictionary within a dictionary, a dictionary of dictionaries, but things can get complicated, so be careful!
+
+```py
+cats = {
+    'weasley' : { 
+        'fur': 'white and ginger',
+        'eyes': 'yellow',
+        'toes': 'pink'
+        },
+
+    'noche' : { 
+        'fur': 'black',
+        'eyes': 'green',
+        'toes': 'pink'
+        },
+
+    'bigglesworth' : { 
+        'fur': 'none',
+        'eyes': 'red',
+        'toes': 'cloven hoofs'
+        }
+}
+
+for cat_name, cat_info in cats.items():
+    print(cat_name)
+    print(cat_info)
+```
+
+## Practice Using Dictionaries
+
+Please complete the dictionary exercises from the repository.
