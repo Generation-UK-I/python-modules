@@ -408,6 +408,8 @@ print(plants)
 
 ### Back to our code from the start!
 
+Try running the code to see how it works. Then, modify this code to make it your own! 
+
 ```py
 foods = ["tuna", "salmon", "mackerel", "trout"]
 
