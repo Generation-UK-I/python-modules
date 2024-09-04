@@ -99,11 +99,44 @@ else:
 
 Try running this piece of code and at the input prompt, type in brownie again as your menu item and observe what happens. 
 
-We have added an 'else' statement. How this code reads, is now: if the food is equal to the word croissant, then print out "You have bought a croissant!". For all else, print out "You have ordered (whatever the food you have ordered)".
+We have added an 'else' statement. How this code reads, is now: if the food is equal to the word croissant, then print out "You have bought a croissant!". For all else, print out "You have ordered (whatever the food you have ordered)". The else statement provides an alternative action if the condition in the if statement is False (meaning food is not "croissant"). If the if condition is False, `print(f"You have ordered {food}")` is executed instead. It prints a message saying "You have ordered" followed by the input response's value of food. 
 
+But wait, there's more! We have other items from our scenerio to consider that we might want to introduce different actions for. This is where to 'elif' statement comes in. Take a look at our revised code below:
 
+```py
+food = input("What would you like to order? \n")
 
-There is so much more we can do with lists though! We can combine it wil topics we have learned before, for example!
+if food.lower() == 'croissant':
+    print("You have bought a croissant!")
+elif food.lower() == 'cinnamon roll':
+    print("You have ordered a cinnamon roll warmed up!")
+else:
+    print("This is not available... So I will go home!")
+```
+
+The elif statement stands for "else if." It provides an additional condition to check if the first if condition is False. If the first if condition is False and this elif condition is True (meaning the user input matches "cinnamon roll" in any case), the code inside this elif block action will be executed. If the elif condition is True, this line prints the message: You have ordered a cinnamon roll warmed up!. 
+
+The else block provides a fallback action if none of the preceding if or elif conditions are True. If both the if and elif conditions are False, the code inside the else block will run. If the user's input does not match either "croissant" or "cinnamon roll," this line prints: This is not available... So I will go home!.
+
+Now, think back to our scenario from the beginning. Let's put our entire scenario together into a single piece of code, adding all the options: 
+
+```py
+food = input("What would you like to order? \n")
+
+if food.lower() == 'croissant':
+    print("You have bought a croissant!")
+elif food.lower() == 'cinnamon roll':
+    print("You have ordered a cinnamon roll warmed up!")
+elif food.lower() == ' brownie':
+    print("You have ordered a brownie, warmed up with a scoop of ice cream.")
+elif food.lower() == 'cheese danish':
+    print("You have ordered a cheese danish to go!")
+else:
+    print("This is not available... So I will go home!")
+```
+In this code we have added more options to emulate the scenario we had before. For each of the different options, we have added another elif statement to create individual actions to execute in the event you choose brownie, cheese danish, or one of the other options. Your else statement is a fallback, so if any other foods are chosen the the else block will be executed, saying that the item is not available. Try running the above code to see how it works, keep notice of the behavior of the code. 
+
+There is so much more we can do with lists though! We can combine it with topics we have learned before, for example!
 
 ## Checking Whether an Item is not in a list
 
