@@ -45,7 +45,12 @@ You can imagine all of the use cases for this!
 
 ## If Statements
 
-If statements are conditional statements. They look for whether a statement is true or false, then it can do something based on the result. 
+If statements are conditional statements. They look for whether a statement is true or false, then it can do something based on the result. The correct syntax for the if statement is as follows: 
+
+```
+if condition:
+    statements that will be executed if the  condition is evaluated as true
+```
 
 A good analogy of an if statement is visiting a coffee shop. 
 
@@ -59,7 +64,7 @@ This scenario is very similar to how if statements work. If statements are looki
 if there is a croissant, 
     Then I will buy the croissant
 ```
-Although this is not syntaxually correct, the concept of an if statement still applies. Python will look at that first line of code `if there is a croissant available` and will evaluate whether this is true or false. If the statement is evaluated as true, then Python will run the action `Then I will buy the croissant'. If there are no croissants available, then the statement will be evaluated as false and that action will not run. Now, let's take a look at an if statement with the correct syntax: 
+Although the syntax is not technically correct, the concept of an if statement still applies. Python will look at that first line of code `if there is a croissant available` and will evaluate whether this is true or false. If the statement is evaluated as true, then Python will run the action `Then I will buy the croissant`. If there are no croissants available, then the statement will be evaluated as false and that action will not run. Now, let's take a look at an if statement with the correct syntax: 
 
 ```py
 food = input("What would you like to order? \n")
@@ -68,12 +73,37 @@ if food.lower() == 'croissant':
     print("You have bought a croissant!")
 ```
 
-Try running the above code. The code will prompt you in the terminal to order something. Think about the menu in the scenario from before, try ordering a croissant. If you type in croissant, then 
+Try running the above code. There is a couple concepts in here that we have not covered yet, but don't worry for now! Focus on the logic of how an if statement works, then the other concepts will be broken down later on in this powerpoint. 
 
----
-## Comparison Operators
+The code will prompt you in the terminal to order something, try ordering a croissant. If you type in the word 'croissant', then you should see the response in the terminal is, ' You have bought a croissant!'. In the code, Python is reading the first line `food = input("What would you like to order? \n")`. This line has created a variable called food, and stored inside the variable is `input()` and a prompt. `input()` is a tool used for user input. Ther code will pause at this point and wait for a response from a user, or some kind of input. In this case, `input()` is waiting for you to order something. Once you have typed in your order, your repsonse will be stored in the variable 'food', and you can use this variable throughout the life of your code! We will be practicing `input` later on in this course, however it is good to mention now since it makes your if statements more interactive and interesting. In the case of this piece of code, we are using the `input()` within an if statement. 
 
-IMAGE HERE
+The second part of this code is the if statement itself. The statement reads as: if food is equal to croissant, then print 'You have bought a croissant!'. The if statements always start with 'if' and then a condition to evaluate. In this case, the if statement is evaluating your order against the word 'croissant'. There is another bit in this code that has not been covered though, and this is the comparison operator `==`. A comparison operator in Python is used to compare two values and returns True or False based on the comparison. Here is a list of Python operators you can use: 
+
+- Equal (==): Checks if two values are equal.
+- Not Equal (!=): Checks if two values are not equal.
+- Greater Than (>): Checks if the value on the left is greater than the one on the right.
+- Less Than (<): Checks if the value on the left is less than the one on the right.
+- Greater Than or Equal To (>=): Checks if the value on the left is greater than or equal to the one on the right.
+- Less Than or Equal To (<=): Checks if the value on the left is less than or equal to the one on the right.
+
+In our croissant example, the equal (==) operator is used to check to see if the value of the 'food' variable is equal to the word 'croissant'. Try re-running the code again, but think about the other menu items from our scenario. Try ordering a brownie, for example. Notice that when you type in 'brownie' nothing happens! You are taken back to the command prompt. This is because the condition within the if statement evaluated to False, so the action was not taken. Nothing happens because we have not given Python anything to do if the condition was evaluated to False... So let's give it something. 
+
+```py
+food = input("What would you like to order? \n")
+
+if food.lower() == 'croissant':
+    print("You have bought a croissant!")
+else:
+    print(f"You have ordered {food}")
+```
+
+Try running this piece of code and at the input prompt, type in brownie again as your menu item and observe what happens. 
+
+We have added an 'else' statement. How this code reads, is now: if the food is equal to the word croissant, then print out "You have bought a croissant!". For all else, print out "You have ordered (whatever the food you have ordered)".
+
+
+
+There is so much more we can do with lists though! We can combine it wil topics we have learned before, for example!
 
 ## Checking Whether an Item is not in a list
 
