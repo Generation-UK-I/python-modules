@@ -159,14 +159,48 @@ if (number < 5 or number > 100) and number != 50:
     print("The number is either less than 5 or greater than 100, and it's not 50.")
 ```
 
-- is: Checks if two variables point to the same object (identity comparison).
+- is: Checks if two variables point to the same object.
 ```py
+number = 10
+
+if number is 10:
+    print("The number is exactly 10.")
+```
 
 - is not: Checks if two variables point to different objects.
-- in: Checks if a value is present within an iterable (like a list, string, etc.).
-- not in: Checks if a value is not present within an iterable.
+```py
+number = 20
 
-In our croissant example, the equal (==) operator is used to check to see if the value of the 'food' variable is equal to the word 'croissant'. Try re-running the code again, but think about the other menu items from our scenario. Try ordering a brownie, for example. Notice that when you type in 'brownie' nothing happens! You are taken back to the command prompt. This is because the condition within the if statement evaluated to False, so the action was not taken. Nothing happens because we have not given Python anything to do if the condition was evaluated to False... So let's give it something. 
+if number is not 10:
+    print("The number is not 10.")
+```
+
+- in: Checks if a value is present within an iterable (like a list, string, etc.). The following example will not be using a list, but usually this operator would be used to find a value within a list, tuple, etc... This example shows a value within a string.
+```py
+text = "hello world"
+
+if "hello" in text:
+    print("'hello' is found in the text.")
+```
+
+- not in: Checks if a value is not present within an iterable.
+```py
+text = "hello world"
+
+if "goodbye" not in text:
+    print("'goodbye' is not found in the text.")
+```
+
+There are any different operators Python uses to compare. The beauty of Python, is that the operators are very versatile and can be used in different use cases and wih different data types. In our croissant example, the equal (==) operator is used to check to see if the value of the 'food' variable is equal to the word 'croissant'. Let's take a look at our previous code about our coffee shop options:
+
+```py
+food = input("What would you like to order? \n")
+
+if food.lower() == 'croissant':
+    print("You have bought a croissant!")
+```
+
+Try re-running the code again, but think about the other menu items from our scenario. Try ordering a brownie, for example. Notice that when you type in 'brownie' nothing happens! You are taken back to the command prompt. This is because the condition within the if statement evaluated to False, so the action was not taken. Nothing happens because we have not given Python anything to do if the condition was evaluated to False... So let's give it something. 
 
 ```py
 food = input("What would you like to order? \n")
