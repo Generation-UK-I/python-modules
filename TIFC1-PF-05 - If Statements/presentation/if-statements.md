@@ -77,14 +77,94 @@ Try running the above code. There is a couple concepts in here that we have not 
 
 The code will prompt you in the terminal to order something, try ordering a croissant. If you type in the word 'croissant', then you should see the response in the terminal is, ' You have bought a croissant!'. In the code, Python is reading the first line `food = input("What would you like to order? \n")`. This line has created a variable called food, and stored inside the variable is `input()` and a prompt. `input()` is a tool used for user input. Ther code will pause at this point and wait for a response from a user, or some kind of input. In this case, `input()` is waiting for you to order something. Once you have typed in your order, your repsonse will be stored in the variable 'food', and you can use this variable throughout the life of your code! We will be practicing `input` later on in this course, however it is good to mention now since it makes your if statements more interactive and interesting. In the case of this piece of code, we are using the `input()` within an if statement. 
 
-The second part of this code is the if statement itself. The statement reads as: if food is equal to croissant, then print 'You have bought a croissant!'. The if statements always start with 'if' and then a condition to evaluate. In this case, the if statement is evaluating your order against the word 'croissant'. There is another bit in this code that has not been covered though, and this is the comparison operator `==`. A comparison operator in Python is used to compare two values and returns True or False based on the comparison. Here is a list of Python operators you can use: 
+The second part of this code is the if statement itself. The statement reads as: if food is equal to croissant, then print 'You have bought a croissant!'. The if statements always start with 'if' and then a condition to evaluate. In this case, the if statement is evaluating your order against the word 'croissant'. There is another bit in this code that has not been covered though, and this is the comparison operator `==`. 
+
+## Comparison Operators in the Cafe
+
+A comparison operator in Python is used to compare two values and returns True or False based on the comparison. Below is a list of Python operators you can use with some example. Try running each of the examples to see the behavior of the code. You could also try changing the numbers to see how the code would react differently!
 
 - Equal (==): Checks if two values are equal.
+```py
+x = 10
+if x == 10:
+    print("x is equal to 10")
+```
+
 - Not Equal (!=): Checks if two values are not equal.
+```py
+y = 5
+if y != 10:
+    print("y is not equal to 10")
+```
+
 - Greater Than (>): Checks if the value on the left is greater than the one on the right.
+```py
+a = 15
+if a > 10:
+    print("a is greater than 10")
+```
+
 - Less Than (<): Checks if the value on the left is less than the one on the right.
+```py
+b = 3
+if b < 10:
+    print("b is less than 10")
+```
+
 - Greater Than or Equal To (>=): Checks if the value on the left is greater than or equal to the one on the right.
+```py
+c = 7
+if c >= 5:
+    print("c is greater than or equal to 5")
+```
+
 - Less Than or Equal To (<=): Checks if the value on the left is less than or equal to the one on the right.
+```py
+d = 4
+if d <= 4:
+    print("d is less than or equal to 4")
+```
+
+The comparison operators shown above are actually the same as what you would use in Math, so hopefully they are not too unfamiliar. Sometimes, you might also come across some word-based operators in Python. These each have differen use cases like the ones above. Take a look at some of them below and some examples:
+
+- and: Combines two conditions and returns True only if both are true.
+```py
+number = 15
+
+if number > 10 and number < 20:
+    print("The number is between 10 and 20.")
+```
+
+- or: Combines two conditions and returns True if at least one of them is true.
+```py
+number = 3
+
+if number < 5 or number > 100:
+    print("The number is either less than 5 or greater than 100.")
+```
+
+- not: Negates a condition, returning True if the condition is false and False if it's true.
+```py
+number = 7
+
+if number != 10:
+    print("The number is not 10.")
+```
+
+The above three operators can be used with any data types in Python. They can also be combined with any of the other operators to add more conditions to your statement. Here is an example of using all three: 
+```py
+number = 120
+
+if (number < 5 or number > 100) and number != 50:
+    print("The number is either less than 5 or greater than 100, and it's not 50.")
+```
+
+- is: Checks if two variables point to the same object (identity comparison).
+```py
+
+- is not: Checks if two variables point to different objects.
+- in: Checks if a value is present within an iterable (like a list, string, etc.).
+- not in: Checks if a value is not present within an iterable.
 
 In our croissant example, the equal (==) operator is used to check to see if the value of the 'food' variable is equal to the word 'croissant'. Try re-running the code again, but think about the other menu items from our scenario. Try ordering a brownie, for example. Notice that when you type in 'brownie' nothing happens! You are taken back to the command prompt. This is because the condition within the if statement evaluated to False, so the action was not taken. Nothing happens because we have not given Python anything to do if the condition was evaluated to False... So let's give it something. 
 
@@ -158,27 +238,6 @@ else:
     print("Hooray we have it!")
 ```
 
----
-
-## if-elif-else
-
-```py
-foods = ['tuna', 'mackerel', 'salmon', 'sardines']
-
-answer = input("What would you like to eat today boys?\n")
-
-if answer.lower() == 'tuna':
-    print(f"Okay, let's have {foods[0]} for dinner!" )
-elif answer.lower() == 'mackerel':
-    print(f"Okay, let's have {foods[1]} for dinner!")
-elif answer.lower() == 'salmon':
-    print(f"Okay, let's have {foods[2]} for dinner!")
-elif answer == foods[3]:
-    print(f"Okay, let's have {foods[3]} for dinner!")
-else:
-    print("Sorry boys! I only have chicken for dinner!")
-```
-
 ## Using if statements with loops and lists
 
 ```py
@@ -207,6 +266,7 @@ for food in available_foods:
        
 print("No more food! Goodbye!")
 ```
+
 
 ## Back to Our Code from the Start!
 
