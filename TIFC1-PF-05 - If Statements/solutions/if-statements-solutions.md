@@ -67,10 +67,50 @@ Write an if-elif-else chain that determines a person’s stage of life. Set a va
 - If the person is at least 20 years old but less than 65, print a message that the person is an adult. 
 -	If the person is 65 or older, print a message that the person is an elder.
 
+```py
+# Set a value for the variable age
+age = 30
+
+# Use if-elif-else to determine the person's stage of life
+if age < 2:
+    print("The person is a baby.")
+elif age >= 2 and age < 4:
+    print("The person is a toddler.")
+elif age >= 4 and age < 13:
+    print("The person is a kid.")
+elif age >= 13 and age < 20:
+    print("The person is a teenager.")
+elif age >= 20 and age < 65:
+    print("The person is an adult.")
+else:
+    print("The person is an elder.")
+```
+
 ### 3. 
 Make a list of your favorite fruits, and then write a series of independent if statements that check for certain fruits in your list. 
 - Make a list of your three favorite fruits and call it favorite_fruits. 
 - Write five if statements. Each should check whether a certain kind of fruit is in your list. If the fruit is in your list, the if block should print a statement, such as You really like bananas!
+
+```py
+ # Step 1: Make a list of your three favorite fruits
+favorite_fruits = ["banana", "mango", "apple"]
+
+# Step 2: Write five independent if statements to check for certain fruits
+if "banana" in favorite_fruits:
+    print("You really like bananas!")
+
+if "mango" in favorite_fruits:
+    print("You really like mangoes!")
+
+if "apple" in favorite_fruits:
+    print("You really like apples!")
+
+if "grape" not in favorite_fruits:
+    print("It seems you don't like grapes!")
+
+if "pineapple" not in favorite_fruits:
+    print("It seems you don't like pineapples!")
+```
 
 ### 4.	
 Make a list of five or more usernames, including the name 'admin'. Imagine you are writing code that will print a greeting to each user after they log in to a website. Loop through the list, and print a greeting to each user: 
@@ -78,11 +118,46 @@ Make a list of five or more usernames, including the name 'admin'. Imagine you a
 - If the username is 'admin', print a special greeting, such as Hello admin, would you like to see a status report? 
 - Otherwise, print a generic greeting, such as Hello Eric, thank you for logging in again
 
+```py
+# List of usernames including 'admin'
+usernames = ["alice", "bob", "charlie", "admin", "dave"]
+
+# Loop through the list and print a greeting for each user
+for username in usernames:
+    if username == "admin":
+        print("Hello admin, would you like to see a status report?")
+    else:
+        print(f"Hello {username.capitalize()}, thank you for logging in again.")
+```
+
 ## Stretch and Challenge: 
 Add an if test to make sure the list of users is not empty. 
 
 If the list is empty, print the message We need to find some users! 
 Remove all of the usernames from your list, and make sure the correct message is printed
+
+```py
+# List of usernames including 'admin'
+usernames = ["alice", "bob", "charlie", "admin", "dave"]
+
+# Check if the list is empty
+if not usernames:
+    print("We need to find some users!")
+else:
+    # Loop through the list and print a greeting for each user
+    for username in usernames:
+        if username == "admin":
+            print("Hello admin, would you like to see a status report?")
+        else:
+            print(f"Hello {username.capitalize()}, thank you for logging in again.")
+
+# redefine the list as empty
+usernames = []
+
+# Check if the list is empty again
+if not usernames:
+    print("We need to find some users!")
+```
 
 ### 5.
 Do the following to create a program that simulates how websites ensure that everyone has a unique username. 
