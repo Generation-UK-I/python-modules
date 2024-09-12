@@ -178,6 +178,21 @@ Ordinal numbers indicate their position in a list, such as 1st or 2nd. Most ordi
 - Loop through the list. 
 - Use an if-elif-else chain inside the loop to print the proper ordinal ending for each number. Your output should read "1st 2nd 3rd 4th 5th 6th 7th 8th 9th", and each result should be on a separate line.
 
+```py
+# List of numbers 1 through 9
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Loop through the list and print the proper ordinal ending
+for number in numbers:
+    if number == 1:
+        print(str(number) + "st")
+    elif number == 2:
+        print(str(number) + "nd")
+    elif number == 3:
+        print(str(number) + "rd")
+    else:
+        print(str(number) + "th")
+```
 At this point, you’re a more capable programmer than you were when you started this course!
 
 Now that you have a better sense of how real-world situations are modeled in programs, you might be thinking of some problems you could solve with your own programs. Record any ideas you have about problems you might want to solve as your programming skills continue to improve. Consider:
